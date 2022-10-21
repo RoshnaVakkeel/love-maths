@@ -15,6 +15,7 @@ for (let button of buttons){
         });
     }
 });
+
 function runGame() {
    
 }
