@@ -39,7 +39,22 @@ function checkAnswer() {
 
 }
 
+/**
+ * Gets operanads and operator from DOM
+ * and returns correct answer.
+ */
 function calculateCorrectAnswer() {
+
+    let operand1 = parseInt(document.getElementsById('operand1').innerText);
+    let operand2 = parseInt(document.getElementsById('operand2').innerText);
+    let operator = parseInt(document.getElementsById('operator').innerText);
+
+    if (operator=== "+"){
+        return [operand1 + operand2, "addition"];
+    } else {
+        alert (`Unimplemented operator $(operator)`);
+        throw (`Unimplemented operator $(operator). Aborting!`);
+    }
 
 }
 
