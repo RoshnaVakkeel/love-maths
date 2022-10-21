@@ -36,11 +36,12 @@ function runGame(gameType) {
 }
 
 
-//**
+/** 
  * Checks if the userAnswer is equal to the calculateCorrectAnswer
- */
+*/
+ 
 function checkAnswer() {
-    let userAnswer = parseInt(document.getElementById("answer-box").value)
+    let userAnswer = parseInt(document.getElementById("answer-box").value);
     let calculatedAnswer = calculateCorrectAnswer();
     let isCorrect = userAnswer === calculatedAnswer[0];
 
