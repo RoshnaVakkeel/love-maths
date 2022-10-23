@@ -1,4 +1,4 @@
-// Wait or the DOM to be loaded before running the game
+    // Wait or the DOM to be loaded before running the game
 // Get the buttons elements and add event liseners to them
 
 document.addEventListener("DOMContentLoaded",function() {
@@ -46,7 +46,6 @@ function checkAnswer() {
     let isCorrect = userAnswer === calculatedAnswer[0];
 
     if (isCorrect) {
-
         alert ("Hey! You got it right! :D");
         incrementScore();
     } else {
@@ -76,12 +75,20 @@ function calculateCorrectAnswer() {
 
 }
 
+/**
+ * Get answer from DOM and increments the score by one
+ */
 function incrementScore() {
-
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText == ++oldScore;
 }
 
+/**
+ * Gets the current tally of incorrect answers from the DOM and increments it by 1
+ */
 function incrementWrongAnswer() {
-
+    let oldScore = parseInt(document.getElementById("incorrect").innerText)
+    document.getElementById("incorrect").innerText = ++oldScore;
 }
 
 function displayAdditionQuestion(operand1, operand2) {
